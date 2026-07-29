@@ -3,6 +3,7 @@
         "mb:internal/tick",
         "util:internal/tick",
         "nicks:internal/tick",
-        "chat:internal/tick"
+        "chat:internal/tick",
+        "time:internal/tick"
     ]
 }
