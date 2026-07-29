@@ -1,0 +1,8 @@
+{
+    "values": [
+        "mb:internal/tick",
+        "util:internal/tick",
+        "nicks:internal/tick",
+        "chat:internal/tick"
+    ]
+}

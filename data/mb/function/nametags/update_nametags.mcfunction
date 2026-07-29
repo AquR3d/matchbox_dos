@@ -1,0 +1,11 @@
+# we check if the text display exists and the data for the name exists. then we change it
+execute if data storage matchbox:data nicks[0] if entity @e[type=text_display,scores={nametags=0}] run data modify entity @e[limit=1,type=text_display,scores={nametags=0}] text set from storage matchbox:data nicks[0]
+execute if data storage matchbox:data nicks[1] if entity @e[type=text_display,scores={nametags=1}] run data modify entity @e[limit=1,type=text_display,scores={nametags=1}] text set from storage matchbox:data nicks[1]
+execute if data storage matchbox:data nicks[2] if entity @e[type=text_display,scores={nametags=2}] run data modify entity @e[limit=1,type=text_display,scores={nametags=2}] text set from storage matchbox:data nicks[2]
+execute if data storage matchbox:data nicks[3] if entity @e[type=text_display,scores={nametags=3}] run data modify entity @e[limit=1,type=text_display,scores={nametags=3}] text set from storage matchbox:data nicks[3]
+execute if data storage matchbox:data nicks[4] if entity @e[type=text_display,scores={nametags=4}] run data modify entity @e[limit=1,type=text_display,scores={nametags=4}] text set from storage matchbox:data nicks[4]
+execute if data storage matchbox:data nicks[5] if entity @e[type=text_display,scores={nametags=5}] run data modify entity @e[limit=1,type=text_display,scores={nametags=5}] text set from storage matchbox:data nicks[5]
+execute if data storage matchbox:data nicks[6] if entity @e[type=text_display,scores={nametags=6}] run data modify entity @e[limit=1,type=text_display,scores={nametags=6}] text set from storage matchbox:data nicks[6]
+execute if data storage matchbox:data nicks[7] if entity @e[type=text_display,scores={nametags=7}] run data modify entity @e[limit=1,type=text_display,scores={nametags=7}] text set from storage matchbox:data nicks[7]
+execute if data storage matchbox:data nicks[8] if entity @e[type=text_display,scores={nametags=8}] run data modify entity @e[limit=1,type=text_display,scores={nametags=8}] text set from storage matchbox:data nicks[8]
+execute if data storage matchbox:data nicks[9] if entity @e[type=text_display,scores={nametags=9}] run data modify entity @e[limit=1,type=text_display,scores={nametags=9}] text set from storage matchbox:data nicks[9]

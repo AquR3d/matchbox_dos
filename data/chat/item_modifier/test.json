@@ -1,0 +1,10 @@
+{
+  "type": "banner",
+  "function": "minecraft:set_contents",
+  "entries": [
+    {
+      "type": "minecraft:item",
+      "name": "minecraft:writable_book"
+    }
+  ]
+}

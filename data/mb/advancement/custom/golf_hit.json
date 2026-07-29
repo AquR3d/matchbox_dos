@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:snowball"
+    },
+    "title": "Hit Golf",
+    "description": "By AquR3d",
+    "background": "d",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "mb:custom/root",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[golf]}"
+        }
+      }
+    }
+  }
+}

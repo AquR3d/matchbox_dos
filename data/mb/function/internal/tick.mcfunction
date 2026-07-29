@@ -1,0 +1,1 @@
+execute as @e[tag=no_motion] run data modify entity @s Motion set value [0.0d,0.0d,0.0d] 

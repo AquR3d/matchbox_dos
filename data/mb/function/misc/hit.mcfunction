@@ -1,0 +1,1 @@
+execute as @a if entity @s[advancements={mb:custom/hit=true}] run function mb:misc/add_hit

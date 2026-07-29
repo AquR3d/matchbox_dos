@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "nbt": "{recipeBook:{isGuiOpen:1b}}",
+    "equipment": {
+      "mainhand": {
+        "items": [
+            "minecraft:air"
+        ]
+      }
+    }
+  }
+}
