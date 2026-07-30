@@ -7,6 +7,8 @@ $execute unless data storage timer:data timer_ids[{id:"$(id)"}] run return run t
 # otherwise delete from storage...
 
 $data remove storage timer:data timer_ids[{id:"$(id)"}]
+$data remove storage timer:data running_timers[{id:"$(id)"}]
+$data remove storage timer:data paused_timers[{id:"$(id)"}]
 
 # and remove bossbar.
 

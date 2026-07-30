@@ -10,4 +10,4 @@ $execute if data storage timer:data timer_ids[{id:"$(id)"}] run return run tellr
 $bossbar add $(id) "AMONG US."
 
 # add to storage...
-$data modify storage timer:data timer_ids append value {id:"$(id)"}
+$data modify storage timer:data timer_ids append value {id:"$(id)",time:$(time),event_cmd:"$(event_cmd)"}
