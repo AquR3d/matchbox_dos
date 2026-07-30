@@ -1,5 +1,2 @@
-# execute as player
-# sets a return value
-function chat:internal/has_chat_name with entity @s
-# return the return value
-return run data get storage chat:registers return.value
+# execute as player, returns if there is a chat name for this player by checking the storage in chat:data chat_nicks if their UUID is there
+return run function chat:internal/has_chat_name with entity @s
