@@ -1,0 +1,5 @@
+{
+  "function": "minecraft:set_name",
+  "name": "Chat",
+  "target": "item_name"
+}
