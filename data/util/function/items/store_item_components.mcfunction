@@ -1,0 +1,3 @@
+# okay... we gonna put the basic version of this item in a shulker box at 0 0 0...
+
+$data modify block 0 0 0 Items append value $(Item)

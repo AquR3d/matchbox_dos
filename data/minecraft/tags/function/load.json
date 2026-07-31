@@ -4,7 +4,6 @@
         "util:internal/load",
         "nicks:internal/load",
         "chat:internal/load",
-        "mb:gs/internal/load",
         "time:internal/load"
     ]
 }
