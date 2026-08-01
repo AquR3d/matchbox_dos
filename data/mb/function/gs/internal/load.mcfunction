@@ -1,12 +1,12 @@
 # create game state storage nbt data
 
 # SHOULD NOT MODIFY the current game state...
-execute unless data storage matchbox:data current_game_state_tick_function run data merge storage matchbox:data {current_game_state_tick_function:""}
+execute unless data storage mb:data game.current_game_state_tick_function run data merge storage mb:data {game:{current_game_state_tick_function:""}}
 
 # all the different game states...
-#   transition (T)
-#   in_game_paused (IGP)
-#   pre_game (PG)
-#   in_map (IM)
-#   in_discussion (ID)
-#   in_voting (IV)
+#   0 transition (T)
+#   1 in_game_paused (IGP)
+#   2 pre_game (PG)
+#   3 in_map (IM)
+#   4 in_discussion (ID)
+#   5 in_voting (IV)
