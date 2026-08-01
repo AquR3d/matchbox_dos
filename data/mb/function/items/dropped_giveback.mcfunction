@@ -1,2 +1,0 @@
-# check for a dropped item with tag give back
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{give_back:1b}}}}] if data entity @s Thrower run function mb:items/give_dropped_item with entity @s
