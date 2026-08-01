@@ -8,5 +8,11 @@ execute unless data storage mb:data game{} run \
 data merge storage mb:data {game:{current_players:[],disconnected_players:[],current_game_state:{}}}
 execute unless data storage mb:registers args run data merge storage mb:registers {args:{},current_players_queue:[]}
 
+# create matchbox scoreboard... idk
+scoreboard objectives add mb.data dummy
+scoreboard players set $prev_player_count mb.data -1
+scoreboard players set $player_count mb.data 0
+# for detecting player dc...
+
 # game state load...
 function mb:gs/internal/load
