@@ -1,6 +1,6 @@
 # load function
 
-tellraw @a [{"text":"\"NameTags Addon\" by ","color":"yellow"},{"text":"AquR3d :)","color":"aqua"}]
+tellraw @a [{"text":"+\"NameTags Addon\" by ","color":"yellow"},{"text":"AquR3d :)","color":"aqua"}]
 
 # note of what storage exists
 # nicks:registers
