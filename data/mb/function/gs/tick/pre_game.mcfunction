@@ -12,9 +12,9 @@ execute if score $prev_player_count mb.data < $player_count mb.data run return r
 # otherwise, update prev player count and continue.
 scoreboard players operation $prev_player_count mb.data = $player_count mb.data
 
-say hi
-
 # we check if a player that has readied up had dcd...
 # create a player queue to check each current player...
 data modify storage mb:registers current_players_queue set from storage mb:data game.current_players
 
+# go through all of them.
+function mb:gs/internal/pre_game with storage mb:registers current_players_queue[0]

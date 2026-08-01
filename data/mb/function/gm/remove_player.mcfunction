@@ -1,0 +1,3 @@
+# removes the player from curent players list...
+
+function mb:gm/internal/remove_player with entity @s
