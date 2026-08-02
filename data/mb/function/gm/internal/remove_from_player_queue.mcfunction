@@ -1,0 +1,3 @@
+# remove from player queue with UUID...
+
+$data remove storage mb:registers current_players_queue[{UUID:$(UUID)]
