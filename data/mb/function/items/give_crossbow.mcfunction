@@ -1,2 +1,2 @@
 # give unbreakable crossbow
-give @s crossbow{give_back:1b,HideFlags:2,Unbreakable:1b} 1
+give @s crossbow[custom_data={util_give_back:true},unbreakable={}] 1
