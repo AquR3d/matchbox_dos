@@ -1,0 +1,6 @@
+# join team for nametag invisibilityy...
+
+# for every player in the game... add them to a team
+execute as @a if function mb:gm/check_player_in_game run team join mb.sigmas @s
+
+# assign nick names...

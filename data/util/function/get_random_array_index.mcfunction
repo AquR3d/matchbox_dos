@@ -1,0 +1,3 @@
+# args.value has the array size...
+
+return run function util:internal/get_random_array_index with storage util:registers args

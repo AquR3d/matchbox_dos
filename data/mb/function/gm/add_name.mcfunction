@@ -1,0 +1,3 @@
+# adding name to name pool...
+
+$data modify storage mb:data game.name_pool append value "$(name)"

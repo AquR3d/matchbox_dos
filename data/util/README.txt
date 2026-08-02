@@ -14,3 +14,5 @@
 
 # There are also return values under the "util:registers return" nbt.
 # There are comments under each function to describe which macros need to be changed.  Have fun with this datapack!
+
+# just added some saved registers under the util scoreboard called $s0-$s3 just like in MIPS!!! same conventions.
