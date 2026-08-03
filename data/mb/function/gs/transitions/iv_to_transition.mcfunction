@@ -1,0 +1,9 @@
+# in voting to transition...
+
+say in voting transitioning...
+
+# create another timer...
+
+function time:create_timer {id:"mb.iv_to_pg",time:30,event_cmd:"say boobs"}
+
+function time:start_timer {id:"mb.iv_to_pg"}

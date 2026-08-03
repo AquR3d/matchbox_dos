@@ -1,6 +1,8 @@
 # now we gon assign roles...
 
 # by default everyone is innocent with the add player function..
+# reset roles...
+function mb:gm/reset_roles
 
 # so we're only gonna assign the spark and medic!
 

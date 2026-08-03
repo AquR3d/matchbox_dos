@@ -4,7 +4,7 @@
 
 # check if there are enough players...
 # if there are not at least 3 players... return
-execute unless data storage mb:data game.current_players[2] run return run \
+execute unless data storage mb:data game.current_players[1] run return run \
 tellraw @s {"text":"mb:gs/transitions/pg_to_im: There are not enough players to start.","color":"red"}
 
 # next we check if there are enough names in the name pool...
@@ -21,3 +21,5 @@ function mb:gm/setup_game
 
 # and then we start the round.
 
+# round start...
+function mb:gs/internal/round_start

@@ -4,3 +4,9 @@
 execute as @a if function mb:gm/check_player_in_game run team join mb.sigmas @s
 
 # assign nick names...
+function mb:gm/assign_nicks
+
+# assing roles...
+function mb:gm/assign_roles
+
+# clear items...
