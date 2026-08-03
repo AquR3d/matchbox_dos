@@ -1,0 +1,3 @@
+# runs tick function... mainly used for the game_state tick function...
+
+$$(tick_function)

@@ -1,5 +1,6 @@
 # this is the pre_game tick function!  the thing that will be running whilst the game is in pre-game state...
 
+say pre game
 # we check if a player dcd...
 
 # store current player count

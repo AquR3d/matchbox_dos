@@ -10,9 +10,41 @@ data merge storage mb:data \
     current_players:[],\
     disconnected_players:[],\
     current_game_state:{},\
-    current_game_state_tick_function:"",\
     name_pool:[]\
     }}
+
+# const hashmap for the game state :)
+data merge storage mb:data \
+{\
+    const:{\
+        game_state_tick_functions:[\
+            {\
+                game_state:"TRANSITION",\
+                tick_function:"",\
+            },\
+            {\
+                game_state:"PAUSED",\
+                tick_function:"",\
+            },\
+            {\
+                game_state:"PRE_GAME",\
+                tick_function:"function mb:gs/tick/pre_game",\
+            },\
+            {\
+                game_state:"IN_MAP",\
+                tick_function:"",\
+            },\
+            {\
+                game_state:"IN_DISCUSSION",\
+                tick_function:"",\
+            },\
+            {\
+                game_state:"IN_VOTING",\
+                tick_function:"",\
+            }\
+        ]\
+    }\
+}
 execute unless data storage mb:registers args run data merge storage mb:registers \
 {args:{},\
 current_players_queue:[],\
