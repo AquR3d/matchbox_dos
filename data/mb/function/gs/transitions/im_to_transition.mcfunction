@@ -7,6 +7,6 @@ say in map transitioning to in discussion...
 data modify storage mb:data game.current_game_state set value "TRANSITION"
 
 # creat timer to transition to in discussion...
-function time:create_timer {id:"mb.im_to_id",time:40,event_cmd:"function mb:gs/transitions/im_to_id"}
+function time:create_timer {id:"mb.transition_to_id",time:40,event_cmd:"function mb:gs/transitions/transition_to_id"}
 
-function time:start_timer {id:"mb.im_to_id"}
+function time:start_timer {id:"mb.transition_to_id"}

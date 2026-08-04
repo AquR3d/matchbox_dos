@@ -14,6 +14,12 @@ data merge storage mb:data \
     name_pool:[]\
     }}
 
+execute unless data storage mb:data map{} run \
+data merge storage mb:data \
+{map:{\
+    clearer_locs:[],\
+    }}
+
 # const hashmap for the game state :)
 data merge storage mb:data \
 {\
@@ -59,7 +65,8 @@ execute unless data storage mb:registers args run data merge storage mb:register
 return:{value:0},\
 current_players_queue:[],\
 disconnected_players_queue:[],\
-name_pool_queue:[]}
+name_pool_queue:[],\
+clearer_locs_queue:[]}
 
 # create matchbox scoreboard... idk
 scoreboard objectives add mb.data dummy

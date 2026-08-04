@@ -1,1 +1,3 @@
 say paused to transition...
+
+function time:unpause_timer {id:"mb.transition_to_id"}

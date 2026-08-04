@@ -1,1 +1,3 @@
 say id to paused...
+
+function time:pause_timer {id:"mb.in_discussion"}
