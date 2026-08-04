@@ -1,5 +1,5 @@
 
-say in voting...
+say id to iv
 
 # create another timer...
 

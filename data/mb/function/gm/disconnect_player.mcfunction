@@ -1,0 +1,9 @@
+# move player from current players to disconnect...
+
+# first check if player exists...
+
+execute unless function mb:gm/check_player_in_game run return run \
+tellraw @s {"text":"mb:gm/disconnect_player: No player detected to disconnect in CURRENT_PLAYERS.","color":"red"}
+
+# run function otherwise...
+function mb:gm/internal/disconnect_player with entity @s

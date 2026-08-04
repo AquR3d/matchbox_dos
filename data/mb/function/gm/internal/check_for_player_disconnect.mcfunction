@@ -1,0 +1,13 @@
+# check if uuid exists...
+
+$execute unless entity @a[nbt={UUID:$(UUID)}] run function mb:gm/internal/disconnect_player {UUID:$(UUID)}
+$execute unless entity @a[nbt={UUID:$(UUID)}] run data modify storage mb:registers return.value set value true
+
+# remove from queue...
+$data remove storage mb:registers current_players_queue[{UUID:$(UUID)}]
+
+# check if queue is empty...
+execute unless data storage mb:registers current_players_queue[] run return fail
+
+# otherwise, go again...
+function mb:gm/internal/check_for_player_disconnect with storage mb:registers current_players_queue[0]

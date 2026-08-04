@@ -1,5 +1,5 @@
 
-say in discussion...
+say im to id
 
 # set new game state...
 data modify storage mb:data game.current_game_state set value "IN_DISCUSSION"

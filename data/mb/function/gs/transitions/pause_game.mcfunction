@@ -1,0 +1,3 @@
+# run pause game with current game state...
+
+return run function mb:gs/internal/pause_game with storage mb:data game

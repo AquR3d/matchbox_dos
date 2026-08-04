@@ -1,0 +1,3 @@
+# return used arrow number...
+
+$return run data get storage mb:data game.current_players[{UUID:$(UUID)}].used_arrow

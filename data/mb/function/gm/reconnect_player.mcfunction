@@ -1,0 +1,3 @@
+# moves player from disconnected to current players...
+
+function mb:gm/internal/reconnect_player with entity @s

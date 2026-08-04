@@ -1,0 +1,6 @@
+# reconnect player... but check if it exists first...
+$execute unless data storage mb:data game.disconnected_players[{UUID:$(UUID)}] run return fail
+
+# otherwise modify data and connect player again...
+$data modify storage mb:data game.current_players append from storage mb:data game.disconnected_players[{UUID:$(UUID)}]
+$data remove storage mb:data game.disconnected_players[{UUID:$(UUID)}]

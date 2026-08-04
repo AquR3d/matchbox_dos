@@ -1,2 +1,3 @@
-# just runs a macro command.
-$$(cmd)
+# run with internal... runs macro command...
+
+return run function util:internal/run_command with storage util:registers args

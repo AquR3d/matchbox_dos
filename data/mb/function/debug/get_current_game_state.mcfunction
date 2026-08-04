@@ -1,0 +1,3 @@
+# returns the game state...
+
+tellraw @s [{"text":"The current game state is ","color":"yellow"},{"storage":"mb:data","nbt":"game.current_game_state"},{"text":".","color":"yellow"}]

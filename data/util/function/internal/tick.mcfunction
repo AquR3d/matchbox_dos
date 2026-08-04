@@ -1,6 +1,5 @@
 # tick mcfunction
 
-# sittable chairs
-# function util:chairs/sittable_chairs
-
+# give back item...
 execute in overworld run function util:items/check_give_back_item
+

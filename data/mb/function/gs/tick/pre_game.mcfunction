@@ -1,6 +1,7 @@
 # this is the pre_game tick function!  the thing that will be running whilst the game is in pre-game state...
 
-say pre game
+title @a actionbar {"text":"in pregame"}
+
 # we check if a player dcd...
 
 # store current player count
@@ -19,3 +20,4 @@ data modify storage mb:registers current_players_queue set from storage mb:data 
 
 # go through all of them.
 function mb:gs/internal/pre_game with storage mb:registers current_players_queue[0]
+

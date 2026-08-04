@@ -9,7 +9,8 @@ data merge storage mb:data \
 {game:{\
     current_players:[],\
     disconnected_players:[],\
-    current_game_state:{},\
+    current_game_state:"",\
+    paused_game_state:"",\
     name_pool:[]\
     }}
 
@@ -20,34 +21,44 @@ data merge storage mb:data \
         game_state_tick_functions:[\
             {\
                 game_state:"TRANSITION",\
-                tick_function:"",\
+                tick_function:"function mb:gs/tick/transition", \
+                pause_transition:"function mb:gs/transitions/transition_to_paused",\
+                unpause_transition:"function mb:gs/transitions/paused_to_transition" \
             },\
             {\
                 game_state:"PAUSED",\
-                tick_function:"",\
+                tick_function:"function mb:gs/tick/paused"\
             },\
             {\
                 game_state:"PRE_GAME",\
-                tick_function:"function mb:gs/tick/pre_game",\
+                tick_function:"function mb:gs/tick/pre_game" \
             },\
             {\
                 game_state:"IN_MAP",\
-                tick_function:"",\
+                tick_function:"function mb:gs/tick/in_map",\
+                pause_transition:"function mb:gs/transitions/im_to_paused",\
+                unpause_transition:"function mb:gs/transitions/paused_to_im" \
             },\
             {\
                 game_state:"IN_DISCUSSION",\
-                tick_function:"",\
+                tick_function:"function mb:gs/tick/in_discussion",\
+                pause_transition:"function mb:gs/transitions/id_to_paused",\
+                unpause_transition:"function mb:gs/transitions/paused_to_id" \
             },\
             {\
                 game_state:"IN_VOTING",\
-                tick_function:"",\
+                tick_function:"function mb:gs/tick/in_voting",\
+                pause_transition:"function mb:gs/transitions/iv_to_paused",\
+                unpause_transition:"function mb:gs/transitions/paused_to_iv" \
             }\
         ]\
     }\
 }
 execute unless data storage mb:registers args run data merge storage mb:registers \
 {args:{},\
+return:{value:0},\
 current_players_queue:[],\
+disconnected_players_queue:[],\
 name_pool_queue:[]}
 
 # create matchbox scoreboard... idk
