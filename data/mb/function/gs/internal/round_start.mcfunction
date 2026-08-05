@@ -5,7 +5,10 @@
 function mb:gu/map/clear_oak_signs
 
 # tp players...
-function mb:gm/tp_players_to_map
+function mb:gm/map/tp_players_to_map
+
+# clear items...
+execute in overworld as @a if function mb:gm/check_player_in_game run clear @s
 
 # give items...
 execute in overworld as @a if function mb:gm/check_player_in_game run function mb:gu/items/give_items

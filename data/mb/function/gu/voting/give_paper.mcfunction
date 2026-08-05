@@ -1,0 +1,3 @@
+# gives paper with selected nick...
+
+$give @s paper[custom_name="$(nick)",custom_data={mb.voting_tag:true,util_give_back:true}] 1

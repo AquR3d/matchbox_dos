@@ -1,0 +1,13 @@
+# this function READS the selected item and gets the voting paper name... will also set the voted to true or false...
+
+
+# stores if voted...
+$execute store result storage mb:data game.current_players[{UUID:$(UUID)}].voted byte 1.0 \
+if data entity @s {SelectedItem:{components:{"minecraft:custom_data":{mb.voting_tag:true}}}}
+
+# if false... do nothing...
+$execute if data storage mb:data {game:{current_players:[{UUID:$(UUID),voted:false}]}} run return run \
+data modify storage mb:data game.current_players[{UUID:$(UUID)}].my_vote set value ""
+
+# otherwise, store the custom name of voting paper...
+$data modify storage mb:data game.current_players[{UUID:$(UUID)}].my_vote set from entity @s SelectedItem.components.minecraft:custom_name

@@ -4,6 +4,13 @@ say transition to id
 # OKAY SO WE NEED TO DETERMINE IF WE NEED TO DECEASE A PLAYER.
 execute if data storage mb:data game.current_players[{marked:{spark:true}}]
 
+# clear items and give chat book
+execute in overworld as @a if function mb:gm/check_player_in_game run clear @s
+execute in overworld as @a if function mb:gm/check_player_in_game run function chat:give_chat_offhand
+
+# teleport players...
+function mb:gm/map/tp_players_to_discussion_room
+
 # set new game state...
 data modify storage mb:data game.current_game_state set value "IN_DISCUSSION"
 

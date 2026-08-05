@@ -13,7 +13,8 @@ marked:{\
 used_arrow:false,\
 revealed:false,\
 my_vote:[],\
-votes:0}
+votes:0,\
+voted:false}
 
 # copy the current game state
 $data modify storage mb:data game.current_players[{UUID:$(UUID)}].game_state set from storage mb:data game.current_game_state

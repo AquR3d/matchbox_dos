@@ -1,0 +1,9 @@
+# force end game...
+
+# clear all timers
+function time:clear_all_timers
+
+# clear player inventories...
+execute as @a if function mb:gm/check_player_in_game run clear @s
+
+# i'll work on the rest later...

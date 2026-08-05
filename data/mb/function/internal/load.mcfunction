@@ -22,6 +22,7 @@ data merge storage mb:data \
 {map:{\
     clearer_locs:[],\
     spawn_locs:[],\
+    voting_locs:[],\
     }}
 
 # const hashmap for the game state :)

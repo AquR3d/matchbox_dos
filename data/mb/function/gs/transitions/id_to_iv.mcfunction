@@ -1,6 +1,9 @@
 
 say id to iv
 
+# give papers...
+execute in overworld as @a if function mb:gm/check_player_in_game run function mb:gu/voting/give_papers
+
 # set game state to transition..
 # set new game state...
 data modify storage mb:data game.current_game_state set value "IN_VOTING"

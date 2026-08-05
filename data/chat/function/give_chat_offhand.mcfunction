@@ -1,0 +1,3 @@
+# give in offhand instead...
+item replace entity @s weapon.offhand with \
+minecraft:writable_book[custom_data={chat_tag:true,util_give_back:true},custom_name="Chat"] 1
