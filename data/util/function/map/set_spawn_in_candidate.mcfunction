@@ -1,0 +1,3 @@
+# makes this player a candidate to spawn in to the game...
+
+tag @s add spawn_in

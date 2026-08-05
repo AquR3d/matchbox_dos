@@ -1,0 +1,3 @@
+# change storage with macro...
+
+$data modify storage mb:data game.current_players[{UUID:$(UUID)}].dead set value $(value)

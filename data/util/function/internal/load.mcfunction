@@ -2,7 +2,15 @@
 tellraw @a [{"text":"+Utility Datapack by AquR3d","color":"#888888"}]
 
 # create data storage for arguments
-execute unless data storage util:registers args run data merge storage util:registers {args:{a:0,b:0,op:"",lop:"",value:0,cmd:""}}
+execute unless data storage util:registers args run data merge storage util:registers {\
+args:{\
+    a:0,\
+    b:0,\
+    op:"",\
+    lop:"",\
+    value:0,\
+    cmd:"",\
+    spawn_locs_queue:[]}}
 # create return values
 execute unless data storage util:registers return run data merge storage util:registers {return:{value:0}}
 

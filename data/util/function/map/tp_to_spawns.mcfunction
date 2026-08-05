@@ -1,0 +1,3 @@
+# run internal function with args...
+
+function util:internal/tp_to_spawns with storage util:registers args

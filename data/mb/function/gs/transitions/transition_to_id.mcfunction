@@ -1,6 +1,9 @@
 
 say transition to id
 
+# OKAY SO WE NEED TO DETERMINE IF WE NEED TO DECEASE A PLAYER.
+execute if data storage mb:data game.current_players[{marked:{spark:true}}]
+
 # set new game state...
 data modify storage mb:data game.current_game_state set value "IN_DISCUSSION"
 

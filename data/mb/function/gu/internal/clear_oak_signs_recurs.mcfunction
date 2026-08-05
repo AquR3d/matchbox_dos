@@ -14,4 +14,4 @@ kill @e[type=marker,tag=to_clear]
 # pop pos from queue
 data remove storage mb:registers clearer_locs_queue[0]
 # do recurs
-function mb:game_util/map/clear_oak_signs_recurs
+function mb:gu/internal/clear_oak_signs_recurs

@@ -9,4 +9,4 @@ tellraw @s {"text":"mb:game_util/map/clear_oak_signs: There are no clearer locat
 data modify storage mb:registers clearer_locs_queue set from storage mb:data map.clearer_locs
 # do recurs, this function does 
 # fill on the positive axis for both axes except y value is 6 blocks below and 7 above the feet
-function mb:game_util/map/clear_oak_signs_recurs
+function mb:gu/internal/clear_oak_signs_recurs
