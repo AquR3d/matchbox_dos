@@ -10,9 +10,12 @@ args:{\
     lop:"",\
     value:0,\
     cmd:"",\
-    spawn_locs_queue:[]}}
+    spawn_locs_queue:[],\
+    queue:[I;]}}
 # create return values
 execute unless data storage util:registers return run data merge storage util:registers {return:{value:0}}
+
+execute unless data storage util:data stack run data merge storage util:registers {stack:[]}
 
 # scoreboard for math
 scoreboard objectives add util dummy

@@ -1,0 +1,16 @@
+# compare current element with max...
+
+# get current element... and store in $t0
+execute store result score $t0 util run data get storage util:registers queue[0]
+
+# save the greater $t0 and $s0...
+scoreboard players operation $s0 util > $t0 util
+
+# delete front of queue...
+data remove storage util:registers queue[0]
+
+# if empty dont go again...
+execute unless data storage util:registers queue[] run return fail
+
+# otherwise recurs...
+function util:internal/get_max_of_int_array_recurs

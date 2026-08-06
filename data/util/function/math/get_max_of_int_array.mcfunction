@@ -1,0 +1,3 @@
+# run with args...
+
+return run function util:internal/get_max_of_int_array with storage util:registers args

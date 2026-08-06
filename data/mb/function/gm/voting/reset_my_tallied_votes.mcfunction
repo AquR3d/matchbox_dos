@@ -1,0 +1,3 @@
+# just does this with uuid... resets votes to 0...
+
+$data modify storage mb:data game.current_players[{UUID:$(UUID)}].votes set value 0

@@ -1,0 +1,13 @@
+# returns the result from getting it off the stack...
+
+# check if stack there's a number first...
+execute unless data storage util:data stack[] run return fail
+
+# get top of stack...
+$execute store result score $(register) util run data get storage util:data stack[0]
+
+# delete from stack...
+data remove storage util:data stack[0]
+
+# return return value
+$return run scoreboard players get $(register) util

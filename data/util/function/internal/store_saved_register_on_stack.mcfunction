@@ -1,0 +1,6 @@
+# store on stack...
+
+$execute store result storage util:registers args.value int 1.0 run scoreboard players get $(register) util
+
+# add to stack...
+data modify storage util:data stack prepend from storage util:registers args.value
