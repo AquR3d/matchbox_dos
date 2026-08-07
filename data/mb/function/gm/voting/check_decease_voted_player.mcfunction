@@ -2,6 +2,9 @@
 
 execute unless data storage mb:data {game:{voting:{vote_state:"VOTE"}}} run return fail
 
+# run say
+say attempting to vote off person...
+
 # set return to []...
 data merge storage mb:registers {return:{UUID:[]}}
 # deceases the voted player in game.voting.nick...

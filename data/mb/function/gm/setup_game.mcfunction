@@ -1,5 +1,9 @@
 # join team for nametag invisibilityy...
 
+# first reset some game stuff
+data modify storage mb:data game.deceased_players set value []
+data modify storage mb:data game.spectators set value []
+
 # for every player in the game... add them to a team
 execute in overworld as @a if function mb:gm/check_player_in_game run team join mb.sigmas
 

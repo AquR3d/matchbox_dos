@@ -2,6 +2,9 @@
 
 say in map transitioning to in discussion...
 
+# turn off friendly fire...
+team modify mb.sigmas friendlyFire false
+
 # set game state to transition..
 # set new game state...
 data modify storage mb:data game.current_game_state set value "TRANSITION"

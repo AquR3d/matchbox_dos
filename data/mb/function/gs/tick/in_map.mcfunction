@@ -2,6 +2,9 @@
 
 title @a actionbar {"text":"in map"}
 
+# give weakness to prevent fighting
+execute as @a if function mb:gm/check_player_in_game run effect give @s weakness 1 255 true
+
 # check revealed...
 
 # prevent matchbox arrows from being picked up...
@@ -12,6 +15,10 @@ title @a actionbar {"text":"in map"}
 
 # also change any dropped signs to custom signs...
 function mb:gu/items/dropped_sign_change
+
+# detect if revealed...
+execute as @a if function mb:gm/check_player_in_game if data entity @s {active_effects:[{id:"minecraft:glowing"}]} run \
+function mb:gm/reveal_player with entity @s
 
 # testing out dc check...
 execute if function mb:gm/check_for_player_disconnect run function mb:gs/transitions/pause_game

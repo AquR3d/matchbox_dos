@@ -9,4 +9,4 @@ function nicks:remove_nametag
 
 # add nametag...
 $function nicks:add_nametag with storage mb:data game.current_players[{UUID:$(UUID)}]
-function nicks:hide_nametag {hide:false}
+function nicks:hide_nametag {hide:true}

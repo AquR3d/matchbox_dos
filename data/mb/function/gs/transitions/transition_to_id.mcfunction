@@ -8,6 +8,9 @@ execute if data storage mb:data game.current_players[{marked:{spark:true}}]
 execute in overworld as @a if function mb:gm/check_player_in_game run clear @s
 execute in overworld as @a if function mb:gm/check_player_in_game run function chat:give_chat_offhand
 
+# hide nametags...
+execute as @a if function mb:gm/check_player_in_game run function nicks:hide_nametag {hide:true}
+
 # teleport players...
 function mb:gm/map/tp_players_to_discussion_room
 

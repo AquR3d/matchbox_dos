@@ -1,10 +1,9 @@
 {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-        "type": "minecraft:player",
-        "effects": {
-        "minecraft:glowing": {}
-        }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "minecraft:flags": {
+      "is_glowing": true
     }
+  }
 }
