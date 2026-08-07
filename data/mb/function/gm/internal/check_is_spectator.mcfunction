@@ -1,0 +1,3 @@
+# check storage...
+
+$return run execute if data storage mb:data game.spectators[{UUID:$(UUID)}]

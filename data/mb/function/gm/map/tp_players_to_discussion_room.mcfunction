@@ -6,3 +6,6 @@ execute in overworld as @a if function mb:gm/check_player_in_game run function u
 # teleport.
 
 function util:internal/tp_to_spawns {storage:"mb:data",nbt:"map.voting_locs"}
+
+
+# add teleport spectators...

@@ -1,0 +1,3 @@
+# check if this Uuid is a spectator...
+
+return run function mb:gm/internal/check_is_spectator with entity @s

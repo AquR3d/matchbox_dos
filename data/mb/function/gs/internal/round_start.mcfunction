@@ -17,6 +17,11 @@ execute in overworld as @a if function mb:gm/check_player_in_game run clear @s
 
 # give items...
 execute in overworld as @a if function mb:gm/check_player_in_game run function mb:gu/items/give_items
+
+# this is where we'd check if we wanted to reset the arrows again, anyways reset scoreboard
+execute in overworld as @a if function mb:gm/check_player_in_game run \
+scoreboard players reset @s mb.crossbow
+
 # if player has not used an arrow, give them an arrow...
 execute in overworld as @a if function mb:gm/check_player_in_game unless function mb:gm/get_player_used_arrow_data run \
 function mb:gu/items/give_arrow
