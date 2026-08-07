@@ -8,6 +8,7 @@ execute as @a if function mb:gm/check_player_in_game run effect give @s weakness
 # check for swap..
 
 # execute if swap... do swap.
+execute if function mb:gm/check_spark_can_swap run function mb:gm/trigger_spark_swap
 
 # check crossbow use...
 execute as @a if function mb:gm/check_player_in_game unless function mb:gm/get_player_used_arrow_data \

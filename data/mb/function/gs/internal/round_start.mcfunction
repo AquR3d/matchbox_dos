@@ -29,3 +29,12 @@ function mb:gu/items/give_arrow
 # reveal players who are revealed... here might add a custom thing
 execute in overworld as @a if function mb:gm/check_player_in_game if function mb:gm/check_player_is_revealed run \
 function mb:gm/reveal_player with entity @s
+
+# reset spark selected item slot
+scoreboard players set $spark_selected_item_slot mb.data -1
+
+# reset spark swap stuff...
+data modify storage mb:data game.current_players[{role:"SPARK"}].can_swap set value false
+
+# change it back in 1 second...
+schedule function mb:gm/reset_spark_swap_cooldown 1s append

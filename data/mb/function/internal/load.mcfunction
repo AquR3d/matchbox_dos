@@ -127,9 +127,12 @@ spawn_locs_queue:[]}
 # create matchbox scoreboard... idk
 scoreboard objectives add mb.data dummy
 scoreboard objectives add mb.crossbow minecraft.used:minecraft.crossbow
+scoreboard objectives add mb.swap trigger
 execute unless score $prev_player_count mb.data = $prev_player_count mb.data run scoreboard players set $prev_player_count mb.data -1
 execute unless score $player_count mb.data = $player_count mb.data run scoreboard players set $player_count mb.data 0
 execute unless score $skip_vote mb.data = $skip_vote mb.data run scoreboard players set $skip_vote mb.data 0
+execute unless score $spark_selected_item_slot mb.data = $spark_selected_item_slot mb.data run scoreboard players set $spark_selected_item_slot mb.data -1
+
 # for detecting player dc...
 
 # make team... for visibility ig

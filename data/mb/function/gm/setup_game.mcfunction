@@ -21,5 +21,9 @@ execute in overworld as @a if function mb:gm/check_player_in_game run function m
 # assing roles...
 function mb:gm/assign_roles
 
+# check if spark has a swap key...
+execute in overworld as @a if function mb:gm/check_is_spark unless score @s mb.swap = @s mb.swap run \
+function mb:gm/set_default_swap_key
+
 # now display to them their names and roles and stuff...
 
