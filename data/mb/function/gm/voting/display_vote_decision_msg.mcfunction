@@ -1,0 +1,3 @@
+# truns internal display vote messgae with vote state...
+
+function mb:gm/internal/display_vote_decision_msg with storage mb:data game.voting

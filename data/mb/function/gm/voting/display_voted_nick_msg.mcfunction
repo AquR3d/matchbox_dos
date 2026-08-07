@@ -1,0 +1,3 @@
+# just says with $nick is voted off...
+
+$title @a title "$(nick) is voted off oof"
