@@ -9,3 +9,9 @@ function util:internal/tp_to_spawns {storage:"mb:data",nbt:"map.voting_locs"}
 
 
 # add teleport spectators...
+# teleport spectators
+execute in overworld as @a if function mb:gm/check_is_spectator run function util:map/set_spawn_in_candidate
+
+# teleport.
+
+function util:internal/tp_to_spawns {storage:"mb:data",nbt:"map.spectator_voting_locs"}

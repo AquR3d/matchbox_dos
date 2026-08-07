@@ -12,11 +12,20 @@ $data modify storage util:registers args.cmd set from storage mb:data const.end_
 function util:run_command
 
 # clear items
-execute as @a if function mb:gm/check_player_in_game run clear @s
+execute as @a[team=mb.sigmas] run clear @s
 
 # remove nametags and chat names...
-execute as @a if function mb:gm/check_player_in_game run function nicks:remove_nametag
-execute as @a if function mb:gm/check_player_in_game run function chat:remove_chat_nick
+execute as @a[team=mb.sigmas] run function nicks:remove_nametag
+execute as @a[team=mb.sigmas] run function chat:remove_chat_nick
+
+# make spectators in adventure mode
+execute in overworld as @a if function mb:gm/check_is_spectator run gamemode adventure @s
+
+# teleport & players spectators
+execute in overworld as @a[team=mb.sigmas] run function util:map/set_spawn_in_candidate
+
+# teleport.
+function util:internal/tp_to_spawns {storage:"mb:data",nbt:"map.lobby_locs"}
 
 # leave ig
 team leave @a[team=mb.sigmas]
@@ -25,6 +34,8 @@ team leave @a[team=mb.sigmas]
 data modify storage mb:data game.current_players set value []
 data modify storage mb:data game.deceased_players set value []
 data modify storage mb:data game.spectators set value []
+
+# tp to lobby
 
 
 

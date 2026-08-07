@@ -32,6 +32,9 @@ data merge storage mb:data \
     clearer_locs:[],\
     spawn_locs:[],\
     voting_locs:[],\
+    spectator_voting_locs:[],\
+    spectator_spawn_locs:[],\
+    lobby_locs:[],\
     }}
 
 # const hashmap for the game state :)

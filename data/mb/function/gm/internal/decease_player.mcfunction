@@ -11,4 +11,4 @@ $execute unless data storage mb:data game.spectators[{UUID:$(UUID)}] run \
 data modify storage mb:data game.spectators append from storage mb:data game.current_players[{UUID:$(UUID)}]
 $data remove storage mb:data game.current_players[{UUID:$(UUID)}]
 
-gamemode spectator @s
+$gamemode spectator @a[limit=1,nbt={UUID:$(UUID)}]
