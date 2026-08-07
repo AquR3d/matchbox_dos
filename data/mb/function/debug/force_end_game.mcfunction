@@ -3,7 +3,8 @@
 # clear all timers
 function time:clear_all_timers
 
-# clear player inventories...
-execute as @a if function mb:gm/check_player_in_game run clear @s
+# set end state to "INNOCENT"
+data modify storage mb:data game.end_state set value "INNOCENT"
 
-# i'll work on the rest later...
+# end game
+function mb:gs/transitions/end_game with storage mb:data game

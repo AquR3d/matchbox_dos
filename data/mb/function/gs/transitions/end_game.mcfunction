@@ -11,6 +11,8 @@ $data modify storage util:registers args.cmd set from storage mb:data const.end_
 # run command...
 function util:run_command
 
+# deceased players aren't on mb.sigmas
+
 # clear items
 execute as @a[team=mb.sigmas] run clear @s
 

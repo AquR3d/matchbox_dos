@@ -5,6 +5,10 @@ title @a actionbar {"text":"in map"}
 # give weakness to prevent fighting
 execute as @a if function mb:gm/check_player_in_game run effect give @s weakness 1 255 true
 
+# check for swap..
+
+# execute if swap... do swap.
+
 # check crossbow use...
 execute as @a if function mb:gm/check_player_in_game unless function mb:gm/get_player_used_arrow_data \
 if score @s mb.crossbow matches 1.. run function mb:gm/set_used_arrow {value:true}

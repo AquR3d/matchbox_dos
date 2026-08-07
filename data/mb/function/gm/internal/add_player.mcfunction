@@ -5,7 +5,7 @@ $data modify storage mb:data game.current_players append value \
 UUID:$(UUID),\
 nick:"",\
 role:"INNOCENT",\
-game_state:"",\
+can_swap:false,\
 dead:false,\
 marked:{\
     spark:false,\

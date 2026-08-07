@@ -75,37 +75,39 @@ data merge storage mb:data \
                 unpause_transition:"function mb:gs/transitions/paused_to_iv" \
             }\
         ],\
-        vote_decisions:[\
-            {\
-                decision:"SKIP",\
-                display_cmd:"title @a title skip",\
-            },\
-            {\
-                decision:"TIE",\
-                display_cmd:"title @a title tie",\
-            },\
-            {\
-                decision:"VOTE",\
-                display_cmd:"function mb:gm/voting/display_voted_nick_msg with storage mb:data game.voting",\
-            },\
-            {\
-                decision:"ERROR",\
-                display_cmd:"say ruh roh voting error detected no one to vote off",\
-            },\
+    vote_decisions:[\
+        {\
+            decision:"SKIP",\
+            display_cmd:"title @a title skip",\
+        },\
+        {\
+            decision:"TIE",\
+            display_cmd:"title @a title tie",\
+        },\
+        {\
+            decision:"VOTE",\
+            display_cmd:"function mb:gm/voting/display_voted_nick_msg with storage mb:data game.voting",\
+        },\
+        {\
+            decision:"ERROR",\
+            display_cmd:"say ruh roh voting error detected no one to vote off",\
+        },\
         ],\
-        end_state_functions:[\
-            {\
-                state:"CONTINUE",\
-                event_cmd:"function mb:gs/transitions/iv_to_im",\
-            },\
-            {\
-                state:"INNOCENT",\
-                event_cmd:"say innocent won",\
-            },\
-            {\
-                state:"SPARK",\
-                event_cmd:"say spark won",\
-            },\
+    end_state_functions:[\
+        {\
+            state:"CONTINUE",\
+            event_cmd:"function mb:gs/transitions/iv_to_im",\
+        },\
+        {\
+            state:"INNOCENT",\
+            event_cmd:"say innocent won",\
+        },\
+        {\
+            state:"SPARK",\
+            event_cmd:"say spark won",\
+        },\
+        ],\
+    time:[\
         ]\
     }\
 }
