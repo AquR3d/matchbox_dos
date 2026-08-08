@@ -1,0 +1,3 @@
+# clears interaction...
+
+$data remove storage util:data player_interactions[{from:$(UUID)}]

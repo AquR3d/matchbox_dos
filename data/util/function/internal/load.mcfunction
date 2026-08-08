@@ -16,9 +16,11 @@ args:{\
 execute unless data storage util:registers return run data merge storage util:registers {return:{value:0}}
 
 execute unless data storage util:data stack run data merge storage util:registers {stack:[]}
+execute unless data storage util:data player_interactions run data merge storage util:data {player_interactions:[]}
 
 # scoreboard for math
 scoreboard objectives add util dummy
+scoreboard objectives add util.right_clicked_player dummy
 # add temp registers for constants
 # apparently i can check if a scoreboard value of an entity existsby comparing it to itself?????????? idk
 execute unless score $t0 util = $t0 util run scoreboard players set $t0 util 0

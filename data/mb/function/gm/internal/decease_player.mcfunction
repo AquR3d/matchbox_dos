@@ -11,4 +11,8 @@ $execute unless data storage mb:data game.spectators[{UUID:$(UUID)}] run \
 data modify storage mb:data game.spectators append from storage mb:data game.current_players[{UUID:$(UUID)}]
 $data remove storage mb:data game.current_players[{UUID:$(UUID)}]
 
+# change gamemode
 $gamemode spectator @a[limit=1,nbt={UUID:$(UUID)}]
+
+# hide nametag
+$execute in overworld as @a[limit=1,nbt={UUID:$(UUID)}] run function nicks:hide_nametag {hide:true}

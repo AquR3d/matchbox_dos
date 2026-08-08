@@ -27,3 +27,10 @@ function mb:gm/set_default_swap_key
 
 # now display to them their names and roles and stuff...
 
+# set marking...
+execute if data storage mb:data game.current_players[{role:"MEDIC"}] run \
+data modify storage mb:data game.current_players[{role:"MEDIC"}].can_mark set value true
+
+execute if data storage mb:data game.current_players[{role:"SPARK"}] run \
+data modify storage mb:data game.current_players[{role:"SPARK"}].can_mark set value true
+

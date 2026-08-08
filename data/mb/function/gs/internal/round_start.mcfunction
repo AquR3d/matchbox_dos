@@ -30,8 +30,21 @@ function mb:gu/items/give_arrow
 execute in overworld as @a if function mb:gm/check_player_in_game if function mb:gm/check_player_is_revealed run \
 function mb:gm/reveal_player with entity @s
 
+# reset marked statuses...
+function mb:gm/reset_all_marked
+
 # reset spark selected item slot
 scoreboard players set $spark_selected_item_slot mb.data -1
+
+# reset right click for spark and medic... for now im just gonna reset the scoreboard... cuz im lazy but in the future i might not
+execute in overworld as @a if function mb:gm/check_is_spark run scoreboard players set @s util.right_clicked_player 0
+execute in overworld as @a if function mb:gm/check_is_spark run function util:clear_player_interaction
+execute in overworld as @a if function mb:gm/check_is_medic run scoreboard players set @s util.right_clicked_player 0
+execute in overworld as @a if function mb:gm/check_is_medic run function util:clear_player_interaction
+
+# reset marking... only for spark cuz medic is once per game...
+execute if data storage mb:data game.current_players[{role:"SPARK"}] run \
+data modify storage mb:data game.current_players[{role:"SPARK"}].can_mark set value true
 
 # reset spark swap stuff...
 data modify storage mb:data game.current_players[{role:"SPARK"}].can_swap set value false

@@ -5,8 +5,18 @@ title @a actionbar {"text":"in map"}
 # give weakness to prevent fighting
 execute as @a if function mb:gm/check_player_in_game run effect give @s weakness 1 255 true
 
-# check for swap..
+# check marking...
+# if spark right clciked pllayer... check if marked...
+execute if data storage mb:data game.current_players[{role:"SPARK",can_mark:true}] \
+in overworld as @a if function mb:gm/check_is_spark if score @s util.right_clicked_player matches 1.. \
+run function mb:gm/check_spark_marked with entity @s
 
+# medic mark?
+execute if data storage mb:data game.current_players[{role:"MEDIC",can_mark:true}] \
+in overworld as @a if function mb:gm/check_is_medic if score @s util.right_clicked_player matches 1.. \
+run function mb:gm/check_medic_marked with entity @s
+
+# check for swap..
 # execute if swap... do swap.
 execute if function mb:gm/check_spark_can_swap run function mb:gm/trigger_spark_swap
 
@@ -24,7 +34,7 @@ if score @s mb.crossbow matches 1.. run function mb:gm/set_used_arrow {value:tru
 function mb:gu/items/dropped_sign_change
 
 # detect if revealed...
-execute as @a if function mb:gm/check_player_in_game if data entity @s {active_effects:[{id:"minecraft:glowing"}]} run \
+execute in overworld as @a if function mb:gm/check_player_in_game if data entity @s {active_effects:[{id:"minecraft:glowing"}]} run \
 function mb:gm/reveal_player with entity @s
 
 # testing out dc check...

@@ -10,6 +10,7 @@ dead:false,\
 marked:{\
     spark:false,\
     medic:false},\
+can_mark:false,\
 used_arrow:false,\
 revealed:false,\
 my_vote:[],\
