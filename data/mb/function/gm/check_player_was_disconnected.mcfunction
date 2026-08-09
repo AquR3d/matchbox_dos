@@ -1,0 +1,3 @@
+# this function checks if this player uuid is in the disconnected players array...
+
+return run function mb:gm/internal/check_player_was_disconnected with entity @s

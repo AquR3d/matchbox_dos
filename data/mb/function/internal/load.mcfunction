@@ -118,6 +118,7 @@ execute unless data storage mb:registers args run data merge storage mb:register
 return:{value:0},\
 current_players_queue:[],\
 disconnected_players_queue:[],\
+spectators_queue:[],\
 name_pool_queue:[],\
 clearer_locs_queue:[],\
 spawn_locs_queue:[]}
@@ -127,6 +128,7 @@ scoreboard objectives add mb.data dummy
 scoreboard objectives add mb.crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add mb.swap trigger
 scoreboard objectives add mb.time dummy
+scoreboard objectives add mb.join minecraft.custom:minecraft.leave_game
 
 # directly controls game time stuff... all in ticks btw
 execute unless score $in_map mb.time = $in_map mb.time run scoreboard players set $in_map mb.time 10
