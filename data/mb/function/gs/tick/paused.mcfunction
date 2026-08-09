@@ -1,13 +1,9 @@
-title @a actionbar {"text":"in paused"}
+title @a title {"text":"PAUSED"}
+title @a subtitle {"text":"waiting for player to reconnect... /function mb:debug/force_continue to force continue.  Unknown behavior may immerse."}
 
 # detect for a reconnection...
 
-
-
-
-
-
-
+# immobile movement
 
 
 

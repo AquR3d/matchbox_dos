@@ -17,6 +17,7 @@ execute unless data storage util:registers return run data merge storage util:re
 
 execute unless data storage util:data stack run data merge storage util:registers {stack:[]}
 execute unless data storage util:data player_interactions run data merge storage util:data {player_interactions:[]}
+execute unless data storage util:data marker run data merge storage util:data {marker:{Pos:[]}}
 
 # scoreboard for math
 scoreboard objectives add util dummy

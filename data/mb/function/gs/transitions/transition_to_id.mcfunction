@@ -1,5 +1,5 @@
 
-say transition to id
+# say transition to id
 
 # OKAY SO WE NEED TO DETERMINE IF WE NEED TO DECEASE A PLAYER.
 execute if data storage mb:data game.current_players[{marked:{spark:true}}] run \
@@ -27,8 +27,13 @@ function mb:gm/map/tp_players_to_discussion_room
 # set new game state...
 data modify storage mb:data game.current_game_state set value "IN_DISCUSSION"
 
+# setup args...
+data merge storage mb:registers {args:{id:"mb.in_discussion",time:300,event_cmd:"function mb:gs/transitions/id_to_iv"}}
+# we scale by 20 for tick time, scoreboard should have seconds...
+execute store result storage mb:registers args.time int 20.0 run scoreboard players get $in_discussion mb.time
 # create new timer
-function time:create_timer {id:"mb.in_discussion",time:300,event_cmd:"function mb:gs/transitions/id_to_iv"}
+function time:create_timer with storage mb:registers args
+
 
 execute as @a if function mb:gm/check_player_in_game run function time:show_timer_to_player {id:"mb.in_discussion"}
 function time:start_timer {id:"mb.in_discussion"}

@@ -1,3 +1,5 @@
 # give dropped item to this player with this Item stuff
 # say hi
-loot give @s mine 0 0 0 bush[custom_data={util_drop_contents:true}]
+
+# looot shulker box
+execute at @e[limit=1,type=marker,tag=util.marker] run loot give @s mine ~ ~ ~ bush[custom_data={util_drop_contents:true}]

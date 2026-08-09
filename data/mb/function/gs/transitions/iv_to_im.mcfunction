@@ -4,7 +4,12 @@
 function mb:gs/internal/round_start
 
 # creat timer...
-function time:create_timer {id:"mb.in_map",time:200,event_cmd:"function mb:gs/transitions/im_to_transition"}
+# setup args...
+data merge storage mb:registers {args:{id:"mb.in_map",time:200,event_cmd:"function mb:gs/transitions/im_to_transition"}}
+# we scale by 20 for tick time, scoreboard should have seconds...
+execute store result storage mb:registers args.time int 20.0 run scoreboard players get $in_map mb.time
+
+function time:create_timer with storage mb:registers args
 
 # shwo timer to all...
 execute as @a if function mb:gm/check_player_in_game run function time:show_timer_to_player {id:"mb.in_map"}

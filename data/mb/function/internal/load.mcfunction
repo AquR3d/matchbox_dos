@@ -107,8 +107,6 @@ data merge storage mb:data \
             event_cmd:"say spark won",\
         },\
         ],\
-    time:[\
-        ]\
     }\
 }
 
@@ -128,6 +126,17 @@ spawn_locs_queue:[]}
 scoreboard objectives add mb.data dummy
 scoreboard objectives add mb.crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add mb.swap trigger
+scoreboard objectives add mb.time dummy
+
+# directly controls game time stuff... all in ticks btw
+execute unless score $in_map mb.time = $in_map mb.time run scoreboard players set $in_map mb.time 10
+execute unless score $transition mb.time = $transition mb.time run scoreboard players set $transition mb.time 3
+execute unless score $in_discussion mb.time = $in_discussion mb.time run scoreboard players set $in_discussion mb.time 12
+execute unless score $in_voting mb.time = $in_voting mb.time run scoreboard players set $in_voting mb.time 7
+execute unless score $voting_transition mb.time = $voting_transition mb.time run scoreboard players set $voting_transition mb.time 5
+
+
+# data
 execute unless score $prev_player_count mb.data = $prev_player_count mb.data run scoreboard players set $prev_player_count mb.data -1
 execute unless score $player_count mb.data = $player_count mb.data run scoreboard players set $player_count mb.data 0
 execute unless score $skip_vote mb.data = $skip_vote mb.data run scoreboard players set $skip_vote mb.data 0
