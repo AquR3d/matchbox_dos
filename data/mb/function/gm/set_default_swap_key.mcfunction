@@ -3,4 +3,4 @@
 tellraw @s {"text":"Your swap key has been assigned to the last hotbar slot."}
 
 # set preference to 9th hotbar slot...
-scoreboard players set @s mb.swap 9
+scoreboard players set $swap_key mb.data 9

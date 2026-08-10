@@ -144,6 +144,7 @@ execute unless score $prev_player_count mb.data = $prev_player_count mb.data run
 execute unless score $player_count mb.data = $player_count mb.data run scoreboard players set $player_count mb.data 0
 execute unless score $skip_vote mb.data = $skip_vote mb.data run scoreboard players set $skip_vote mb.data 0
 execute unless score $spark_selected_item_slot mb.data = $spark_selected_item_slot mb.data run scoreboard players set $spark_selected_item_slot mb.data -1
+execute unless score $swap_key mb.data = $swap_key mb.data run scoreboard players set $swap_key mb.data 9
 
 # for detecting player dc...
 

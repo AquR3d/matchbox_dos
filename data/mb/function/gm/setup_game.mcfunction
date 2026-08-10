@@ -25,6 +25,10 @@ function mb:gm/assign_roles
 execute in overworld as @a if function mb:gm/check_is_spark unless score @s mb.swap matches 1..9 run \
 function mb:gm/set_default_swap_key
 
+# otherwise, assign swap key to their preference...
+execute in overworld as @a if function mb:gm/check_is_spark if score @s mb.swap matches 1..9 run \
+scoreboard players operation $swap_key mb.data = @s mb.swap
+
 # now display to them their names and roles and stuff...
 execute as @a if function mb:gm/check_player_in_game run function mb:gm/tell_name_and_role with entity @s
 

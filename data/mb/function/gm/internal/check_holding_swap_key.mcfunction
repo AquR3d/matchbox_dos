@@ -7,4 +7,4 @@ $execute store result score $spark_selected_item_slot mb.data in overworld as @a
 scoreboard players add $spark_selected_item_slot mb.data 1
 
 # compare with mb.swap preferences of this player..
-$return run execute if score @a[nbt={UUID:$(UUID)},limit=1] mb.swap = $spark_selected_item_slot mb.data
+return run execute if score $swap_key mb.data = $spark_selected_item_slot mb.data

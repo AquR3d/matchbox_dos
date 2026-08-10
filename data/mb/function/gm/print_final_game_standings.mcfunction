@@ -1,6 +1,6 @@
 # this function will print the final game standings...
 
-tellraw @a {"text":"FINAL PLAYER STANDINGS:"}
+tellraw @a {"text":"FINAL PLAYER STANDINGS:","bold":true}
 
 # as every player... print survive
 # create queue
