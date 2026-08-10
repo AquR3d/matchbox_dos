@@ -1,6 +1,11 @@
 
 # say transition to id
 
+# just say no one died, player died msg will show immediately after if they did die
+execute unless data storage mb:data game.current_players[{marked:{spark:true}}] \
+in overworld as @a if function mb:gm/check_player_in_game run \
+title @s title {"text":"No one died."}
+
 # OKAY SO WE NEED TO DETERMINE IF WE NEED TO DECEASE A PLAYER.
 execute if data storage mb:data game.current_players[{marked:{spark:true}}] run \
 function mb:gm/internal/check_decease_marked_player
@@ -23,6 +28,9 @@ execute as @a if function mb:gm/check_player_in_game run function nicks:hide_nam
 function mb:gm/map/tp_players_to_discussion_room
 
 # teleport spectators...
+
+# make them mobile...
+execute in overworld as @a run function mb:gu/misc/reset_immobile
 
 # set new game state...
 data modify storage mb:data game.current_game_state set value "IN_DISCUSSION"

@@ -1,3 +1,3 @@
 # return if data exists...
 
-$return run execute if data storage mb:data game.disconneced_players[{UUID:$(UUID)}]
+$return run execute if data storage mb:data game.disconnected_players[{UUID:$(UUID)}]

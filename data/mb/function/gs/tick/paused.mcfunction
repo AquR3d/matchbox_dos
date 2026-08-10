@@ -1,12 +1,14 @@
-title @a title {"text":"PAUSED"}
-title @a subtitle {"text":"waiting for player to reconnect... /function mb:debug/force_continue to force continue.  Unknown behavior may immerse."}
+
+
+# say paused
+title @a actionbar {"text":"IN PAUSED - waiting for player to reconnect... /function mb:debug/force_continue to force continue.  Unknown behavior may immerse."}
 
 # detect for a reconnection...
 
 # immobile movement
 
 
-
+execute in overworld as @a if function mb:gm/check_player_in_game run function mb:gu/misc/immobile
 
 
 

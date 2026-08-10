@@ -6,3 +6,7 @@ function time:remove_timer {id:"mb.swap"}
 
 # reset spark cooldown by saying can swap...
 data modify storage mb:data game.current_players[{role:"SPARK"}].can_swap set value true
+
+# tell spark that swap cooldown over
+execute in overworld as @a if function mb:gm/check_is_spark run \
+tellraw @s {"text":"Swap ability is ready.","color":"red"}

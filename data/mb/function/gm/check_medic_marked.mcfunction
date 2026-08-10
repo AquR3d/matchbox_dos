@@ -19,3 +19,6 @@ function mb:gm/medic_mark_player with storage mb:registers args
 
 # set can mark to false now...
 data modify storage mb:data game.current_players[{role:"MEDIC"}].can_mark set value false
+
+# and tell them mark success.
+tellraw @s {"text":"Mark successful.","color":"yellow"}

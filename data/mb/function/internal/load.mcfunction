@@ -100,11 +100,11 @@ data merge storage mb:data \
         },\
         {\
             state:"INNOCENT",\
-            event_cmd:"say innocent won",\
+            event_cmd:"title @a title [{\"text\":\"INNOCENTS \",\"color\":\"green\"},{\"text\":\"won!\",\"color\":\"white\"}]",\
         },\
         {\
             state:"SPARK",\
-            event_cmd:"say spark won",\
+            event_cmd:"title @a title [{\"text\":\"SPARK \",\"color\":\"yellow\"},{\"text\":\"won!\",\"color\":\"white\"}]",\
         },\
         ],\
     }\
@@ -136,6 +136,7 @@ execute unless score $transition mb.time = $transition mb.time run scoreboard pl
 execute unless score $in_discussion mb.time = $in_discussion mb.time run scoreboard players set $in_discussion mb.time 12
 execute unless score $in_voting mb.time = $in_voting mb.time run scoreboard players set $in_voting mb.time 7
 execute unless score $voting_transition mb.time = $voting_transition mb.time run scoreboard players set $voting_transition mb.time 5
+execute unless score $swap mb.time = $swap mb.time run scoreboard players set $swap mb.time 5
 
 
 # data

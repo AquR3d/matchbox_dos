@@ -1,0 +1,3 @@
+# action bar tell nick...
+
+$title @s actionbar [{"text":"Your name is ","color":"white"},{"text":"$(nick)","color":"yellow"},{"text":".","color":"white"}]

@@ -26,6 +26,7 @@ execute in overworld as @a if function mb:gm/check_is_spark unless score @s mb.s
 function mb:gm/set_default_swap_key
 
 # now display to them their names and roles and stuff...
+execute as @a if function mb:gm/check_player_in_game run function mb:gm/tell_name_and_role with entity @s
 
 # set marking...
 execute if data storage mb:data game.current_players[{role:"MEDIC"}] run \

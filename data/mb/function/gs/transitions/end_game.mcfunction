@@ -13,6 +13,10 @@ function util:run_command
 
 # deceased players aren't on mb.sigmas
 
+# reset mobile
+# make them mobile...
+execute in overworld as @a run function mb:gu/misc/reset_immobile
+
 # clear items
 execute as @a[team=mb.sigmas] run clear @s
 
@@ -29,11 +33,15 @@ execute in overworld as @a[team=mb.sigmas] run function util:map/set_spawn_in_ca
 # teleport.
 function util:internal/tp_to_spawns {storage:"mb:data",nbt:"map.lobby_locs"}
 
+# print final standings...
+function mb:gm/print_final_game_standings
+
 # leave ig
 team leave @a[team=mb.sigmas]
 
 # remove storage from deceased players and current players and spectators
 data modify storage mb:data game.current_players set value []
+data modify storage mb:data game.disconnected_players set value []
 data modify storage mb:data game.deceased_players set value []
 data modify storage mb:data game.spectators set value []
 

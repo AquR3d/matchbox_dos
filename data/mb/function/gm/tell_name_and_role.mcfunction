@@ -1,0 +1,3 @@
+# run internal with storage...
+
+$function mb:gm/internal/tell_name_and_role with storage mb:data game.current_players[{UUID:$(UUID)}]

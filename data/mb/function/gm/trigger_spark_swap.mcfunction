@@ -36,7 +36,16 @@ function util:swap_player_locations
 data modify storage mb:data game.current_players[{role:"SPARK"}].can_swap set value false
 
 # make timer...
-function time:create_timer {id:"mb.swap",time:40,event_cmd:"function mb:gm/reset_spark_swap_cooldown"}
+# setup args...
+data merge storage mb:registers {args:{id:"mb.swap",time:40,event_cmd:"function mb:gm/reset_spark_swap_cooldown"}}
+# we scale by 20 for tick time, scoreboard should have seconds...
+execute store result storage mb:registers args.time int 20.0 run scoreboard players get $swap mb.time
+# create timer with args
+function time:create_timer with storage mb:registers args
+
+# lowk.. im gonna display it to the spark
+execute in overworld as @a if function mb:gm/check_is_spark run \
+function time:show_timer_to_player {id:"mb.swap"}
 
 # show to spark?
 

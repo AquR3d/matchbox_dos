@@ -7,7 +7,7 @@ execute if entity @s[gamemode=creative] run return fail
 execute if entity @s[tag=admin] run return fail
 
 # first check if was a disconnected player... do nothing lol game state will deal with this person
-execute if function mb:gm/check_player_was_disconnected run return fail
+execute as @s if function mb:gm/check_player_was_disconnected run return fail
 
 # otherwise, reset some stuff on them and tp to lobby
 gamemode adventure @s
@@ -21,6 +21,8 @@ attribute @s jump_strength base reset
 # get rid of nick name and chat name
 function nicks:remove_nametag
 function chat:remove_chat_nick
+
+# i could reset their interaction??
 
 # tp to lobby
 function util:map/set_spawn_in_candidate

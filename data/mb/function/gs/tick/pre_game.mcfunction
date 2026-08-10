@@ -1,6 +1,7 @@
 # this is the pre_game tick function!  the thing that will be running whilst the game is in pre-game state...
 
-title @a actionbar {"text":"in pregame"}
+title @a actionbar [{"text":"Matchbox","color":"red"},{"text":" Datapack & Plugin","color":"gray"},{"text":" by ","color":"white"},\
+{"text":"AquR3d","color":"aqua"},{"text":" on ","color":"white"},{"text":"You","color":"white"},{"text":"Tube","color":"red"}]
 
 # we check if a player dcd...
 

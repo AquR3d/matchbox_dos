@@ -1,5 +1,9 @@
 # here we check if we need to decease someone who is marked by the spark...
 
+# just say no one died, player died msg will show immediately after if they did die
+execute in overworld as @a if function mb:gm/check_player_in_game run \
+title @s title {"text":"No one died."}
+
 # first we check if theres more than 1 for some reason...
 execute store result score $num_marked mb.data run execute if data storage mb:data game.current_players[{marked:{spark:true}}]
 
@@ -14,9 +18,12 @@ run tellraw @a {"text":"mb:gm/internal/check_decease_marked_player: Game detecte
 # but first.. check if medic saved them... will prolly add medic saved them thing
 execute if data storage mb:data game.current_players[{marked:{spark:true,medic:true}}] run \
 execute in overworld as @a if function mb:gm/check_player_is_spark_marked run return run \
-tellraw @s {"text":"u have been saved by the medic lol that means u were also spark marked"}
+tellraw @s {"text":"You were saved by the medic.  No one else knows this."}
 
 # otherwise, bro is gonna be deceased
+
+# print deceased...
+function mb:gm/player_has_died_msg with storage mb:data game.current_players[{marked:{spark:true}}]
 
 # setup args
 data merge storage mb:registers {args:{UUID:[]}}

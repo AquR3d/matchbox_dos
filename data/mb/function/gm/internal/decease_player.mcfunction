@@ -2,6 +2,9 @@
 
 $execute if data storage mb:data game.deceased_players[{UUID:$(UUID)}] run return fail
 
+# make them mobile...
+$execute in overworld as @a[limit=1,nbt={UUID:$(UUID)}] run function mb:gu/misc/reset_immobile
+
 # set their thing to dead...
 $data modify storage mb:data game.current_players[{UUID:$(UUID)}].dead set value true
 
