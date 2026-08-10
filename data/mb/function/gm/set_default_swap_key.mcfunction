@@ -1,6 +1,6 @@
 # tell the spark their swap key has been assigned to the ninth hotbar slot...
 
-tellraw @s {"text":"your swap key has been assigned to the last hotbar slot."}
+tellraw @s {"text":"Your swap key has been assigned to the last hotbar slot."}
 
 # set preference to 9th hotbar slot...
 scoreboard players set @s mb.swap 9

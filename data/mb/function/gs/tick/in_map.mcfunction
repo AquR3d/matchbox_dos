@@ -29,10 +29,10 @@ execute as @a if function mb:gm/check_player_in_game unless function mb:gm/get_p
 if score @s mb.crossbow matches 1.. run function mb:gm/set_used_arrow {value:true}
 
 # prevent matchbox arrows from being picked up...
-# execute in overworld as @e[type=spectral_arrow,nbt={item:{components:{"minecraft:custom_data":{mb.tag:true}}},pickup:1b}] run data modify entity @s pickup set value 0b
+execute in overworld as @e[type=spectral_arrow,nbt={item:{components:{"minecraft:custom_data":{mb.tag:true}}},pickup:1b}] run data modify entity @s pickup set value 0b
 
 # kill any matchbox arrows on the ground...
-# execute in overworld as @e[type=spectral_arrow,nbt={item:{components:{"minecraft:custom_data":{mb.tag:true}}},pickup:0b,inGround:1b}] run kill @s
+execute in overworld as @e[type=spectral_arrow,nbt={item:{components:{"minecraft:custom_data":{mb.tag:true}}},pickup:0b,inGround:1b}] run kill @s
 
 # also change any dropped signs to custom signs...
 function mb:gu/items/dropped_sign_change

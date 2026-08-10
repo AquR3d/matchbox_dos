@@ -80,7 +80,7 @@ data merge storage mb:data \
             decision:"SKIP",\
             display_cmd:"title @a title skip",\
         },\
-        {\
+        {\  
             decision:"TIE",\
             display_cmd:"title @a title tie",\
         },\

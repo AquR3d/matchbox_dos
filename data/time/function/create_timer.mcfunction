@@ -11,4 +11,4 @@ $bossbar add $(id) "AMONG US."
 $bossbar set $(id) max $(time)
 
 # add to storage...
-$data modify storage timer:data timer_ids append value {id:"$(id)",time:$(time),event_cmd:"$(event_cmd)"}
+$data modify storage timer:data timer_ids append value {id:"$(id)",time:$(time),event_cmd:"$(event_cmd)",players:[]}

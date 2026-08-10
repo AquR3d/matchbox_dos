@@ -11,4 +11,4 @@ $data modify storage util:registers args.from set from entity $(from) UUID
 $data modify storage util:registers args.to set from entity $(to) UUID
 
 # run internal
-function util:internal/save_interaction with storage util:registers args
+function util:save_interaction with storage util:registers args
