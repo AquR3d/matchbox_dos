@@ -18,10 +18,10 @@ execute store result storage util:registers args.value int 1.0 run function util
 # get array element
 # setup args...
 data merge storage util:registers {args:{storage:"mb:registers",nbt:"current_players_queue"}}
-tellraw @a {"storage":"util:registers","nbt":"args"}
+# tellraw @a {"storage":"util:registers","nbt":"args"}
 # get array elem3ent
 function util:get_array_element
-tellraw @a {"storage":"util:registers","nbt":"return.value"}
+# tellraw @a {"storage":"util:registers","nbt":"return.value"}
 
 # setup aargs
 data merge storage util:registers {args:{player_1:[],player_2:[]}}
